@@ -106,11 +106,25 @@ Some functions might conditionally return a Meatball instance. For example the r
 
 Since all data is stored as key-value pairs in maps, this can make variable renaming refactorings challenging. To circumvent this issue, I recommend defining keys as static constants e.g. one might define `public static final String INVITEE_NAME = "inviteeName";` and retrieve the value like this: `meatball.getString( INVITEE_NAME )`. Changing the variable name of `INVITEE_NAME` and changing its value is trivial and will rename all usages across the system.
 
-## 4.0 Acknowledgements
+## 4.0 Installation
+
+Meatball can be installed by adding this dependency to the project's pom.xml file:
+
+    <dependency>
+      <groupId>org.krishnapatel1992</groupId>
+      <artifactId>meatball</artifactId>
+      <version>1.0.0</version>
+    </dependency>
+
+And then running `mvn clean install`
+
+A file called CodeStyle.xml is included in the root directory. This file contains the code style that was used for this library. This can be imported into IntelliJ, if the user wants to use the same code style.
+
+## 5.0 Acknowledgements
 
 _MongoDB_ is a widely used open source NoSQL database (available at: https://www.mongodb.com). _Any_ is an open source library (available at: https://gitlab.com/dahaiuk/open/any), which was developed by _Richard Bourner_ and has been used in a commercial setting to develop three Minimum Viable Products. The Meatball library was inspired by _MongoDB_ and the _Any_ library. While the Meatball library shares some concepts with _MongoDB_ and the _Any_ library, the design and implementation of the Meatball library is substantially different and entirely my own. I am grateful for the inspiration provided by _MongoDB_ and the _Any_ library.
 
-## 5.0 Licence
+## 6.0 Licence
 
 This library is released under the MIT licence: 
 
